@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-20.04
     container: fedora:32
     steps:
-  	- name: Install Pipenv and Git
+      - name: Install Pipenv and Git
         run: dnf install -y pipenv git
       - name: Checkout code
         uses: actions/checkout@v2

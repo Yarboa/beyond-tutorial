@@ -21,13 +21,5 @@ from msgboard import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.landing, name='landing'),
-    path('board', views.board, name='board'),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
-
-
-# path('accounts/login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
-# path('accounts/logout/', 'django.contrib.auth.views.logout' , {'next_page': '/'},  name='logout'),
-# path('accounts/logout/',  'django.contrib.auth.views.logout' , {'next_page': '/account/login'},  name='logout'),
-# path('accounts/', include('django.contrib.auth.urls')),
-# {'next_page': '/account/login'},  name='logout'),

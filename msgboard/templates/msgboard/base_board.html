@@ -1,41 +1,23 @@
 <html>
-<head>
-<title>Beyond message board</title>
-<style type="text/css">
-    .author, .eom { color: grey }
-    .sidenav {
-       width: 130px;
-       position: fixed;
-       z-index: 1;
-       top: 20px;
-       left: 10px;
-       background: #eee;
-       overflow-x: hidden;
-       padding: 8px 0;
-    }
-    .content {
-       margin-left: 140px; /* Same width as the sidebar + left position in px */
-       font-size: 28px; /* Increased text to enable scrolling */
-       padding: 0px 10px;
-}
-
-</style>
+<title>Beyond message board app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
-    <div class="sidenav">
-        {% block sidenav %}
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/board">Board</a></li>
-            <li><a href="/accounts/logout">Logout</a></li>
-        </ul>
-        {% endblock %}
+    <div class="container-fluid text-left pt-5">    
+    <div class="row content">
+    <div class="col-sm-2 sidenav">
+         <p><a href="/">Board</a></p>
+         <p><a href="/accounts/logout">Logout</a></p>
     </div>
     <div class="content">
-	<h1>Beyond message board</h1>
-        {% block content %}
-        {% endblock %}
+       <h1>Beyond message board app</h1>
+       {% block content %}
+       {% endblock %}
     </div>
 </body>
 </html>

@@ -20,6 +20,6 @@ from msgboard import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.landing, name='landing'),
+    path('', views.board, name='board'),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

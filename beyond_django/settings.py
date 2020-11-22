@@ -55,7 +55,7 @@ ROOT_URLCONF = 'beyond_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/vagrant/msgboard/templates/msgboard'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

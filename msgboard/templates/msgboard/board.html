@@ -13,10 +13,10 @@
 </div>
 {% for message in messages %}
     <div class="message">
-         <p class="author">
-                 Posted by {{message.author}} at {{message.date}}
-         </p>
-         <p>{{ message.text }}</p>
+    <p class="author">
+    Posted by {{message.author}} at {{message.date}}
+    </p>
+    <p>{{ message.text }}</p>
     </div>
 {% endfor %}
 <p class="EOM">(End of messages)</p>

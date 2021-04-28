@@ -14,3 +14,9 @@ def board(request):
         form = MessageForm()
         return render(request, 'msgboard/board.html', {
             'messages': messages, 'form': form, })
+
+def post_list(request):
+   blog_list = ["article1 content1","article2 content2"]
+   return render(request, 'msgboard/post_list.html', {
+            'blog_list': blog_list})
+

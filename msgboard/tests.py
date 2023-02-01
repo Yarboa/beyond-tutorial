@@ -1,15 +1,10 @@
 # import pytest
 
 
-def test_with_authenticated_client(client, django_user_model):
-    username = "admin"
-    password = "123456"
-    django_user_model.objects.create_user(username=username, password=password)
+def test_posts_with_client(client, django_user_model):
     # Use this:
-    # client.login(username=username, password=password)
-    response = client.get('/')
-    assert response.status_code == 302
-    response = client.get(response.url)
+    response = client.get('/posts/')
     assert response.status_code == 200
-    response = client.get('/accounts/logout')
-    assert response.status_code == 301
+    assert isinstance(response.context['blog_list'], list)
+    template_names = set(tmpl.origin.template_name for tmpl in response.templates)
+    assert 'msgboard/post_list.html' in template_names
